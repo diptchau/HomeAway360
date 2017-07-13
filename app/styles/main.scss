@@ -1,0 +1,221 @@
+.image-holder{
+	margin-top: -48px;
+	background-color: black;
+	height: 60vh;
+	width: 100%;
+}
+
+.iconholder {
+	height: 28px;
+	width: 28px;
+	background-size: cover;
+}
+
+.share{
+	margin-right: 15px;
+	background-image: url('../images/icons/015-share.svg');
+}
+
+.heart{
+	height: 24px;
+	width: 24px;
+	margin-left: 13px;
+	margin-top: -3px;
+	background-image: url('../images/icons/014-heart-shape-outline.svg');
+}
+
+.sleeps{
+	height: 30px;
+	width: 30px;
+	margin: auto;
+	margin-bottom: 10px;
+	background-image: url('../images/icons/013-user-list.svg');
+}
+
+.bedrooms{
+	height: 30px;
+	width: 30px;
+	margin: auto;
+	margin-bottom: 10px;
+	background-image: url('../images/icons/012-bed.svg');
+}
+
+.baths{
+	height: 30px;
+	width: 30px;
+	margin: auto;
+	margin-bottom: 10px;
+	background-image: url('../images/icons/011-shower.svg');
+}
+
+.wifi{
+	background-image: url('../images/icons/001-wifi.svg');
+}
+
+.hanger{
+	background-image: url('../images/icons/002-hanger.svg');
+}
+.pets{
+	background-image: url('../images/icons/003-paw-print.svg');
+}
+.microwave{
+	background-image: url('../images/icons/004-microwave.svg');
+}
+.dishwasher{
+	background-image: url('../images/icons/005-dishwasher.svg');
+}
+.hair{
+	background-image: url('../images/icons/006-hair-dryer.svg');
+}
+.towel{
+	background-image: url('../images/icons/007-towel.svg');
+}
+.parking{
+	background-image: url('../images/icons/008-parking.svg');
+}
+.iron{
+	background-image: url('../images/icons/009-iron.svg');
+}
+.beach{
+	background-image: url('../images/icons/010-palm-tree.svg');
+}
+
+.row{
+	margin: 0px;
+}
+
+.container {
+	padding: 0px;
+}
+
+.space-top {
+	margin-top: 20px;
+}
+
+.space-10 {
+	margin-top: 10px;
+}
+
+.header {
+	margin-top: 20px;
+	i {
+		margin-left: 20px;
+		margin-right: 20px;
+		font-size: 28px;
+		color: white;
+	}
+}
+
+.no-mar{
+	margin: 0px;
+	display: inline;
+}
+
+.btn-primary {
+	padding-top: 15px; 
+	padding-bottom: 15px;
+	width: 100%; 
+}
+
+.footer{
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    -webkit-box-shadow: 0px -1px 5px 0px rgba(135,135,135,1);
+	-moz-box-shadow: 0px -1px 5px 0px rgba(135,135,135,1);
+	box-shadow: 0px -1px 5px 0px rgba(135,135,135,1);
+}
+
+.footer-buffer {
+	width: 100%;
+	margin-top: 25%;
+}
+
+.flex-holder{
+	display: flex;
+	align-items: baseline;
+}
+
+.rating {
+	margin-top: -12px;
+}
+
+.review {
+	margin: 0px;
+}
+
+.review-count {
+	margin-left: 92px;
+	margin-top: -14px;
+	position: absolute;
+}
+
+.heart-btn {
+	.btn {
+		border: 0px;
+		box-shadow: 0px 0px 5px 0px rgba(135,135,135,1);
+		padding: 0;
+		padding-top: 5px;
+		height: 50px;
+		width: 50px;
+		margin-left: 75%;
+		icon {
+			margin-top: 2px;
+			margin-left: -2px;
+			font-size: 28px;
+			color: #ff4848;
+		}
+	}
+	margin-top: -45px;
+	border-radius: 50%;
+}
+
+.ovr-icons {
+	text-align: center;
+
+	h3{
+		margin: 0px;
+	}
+}
+
+.amenities {
+	.col-xs-6{
+		margin-bottom: 24px;
+	}
+
+	.iconholder {
+		display: inline;
+		position: absolute;
+	}
+
+	.am-text {
+		margin-top: 5px;
+		margin-left: 40px;
+	}
+}
+.blk-bck {
+	background-color: black;
+	height: 90px;
+	width: 90px;
+}
+
+.owner{
+	h4{
+		margin: 0px;
+	}
+	button {
+		margin-bottom: 10px;
+	}
+}
+
+.ownr-contact-btn {
+	margin-top: 20px;
+	width: 100%;
+}
+
+
+
+
