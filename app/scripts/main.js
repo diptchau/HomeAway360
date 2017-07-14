@@ -1,34 +1,21 @@
+var panorama, viewer;
+
+var mainContainer = document.getElementById( 'maincontainer' );
+
+viewer = new PANOLENS.Viewer( { container: mainContainer } );
+panorama = new PANOLENS.ImagePanorama('images/field.jpg');
 
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   var lastElementClicked;
-//   Barba.Pjax.init();
-//   Barba.Prefetch.init();
-// });
 
-// Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container) {
-// 	if(currentStatus.url.includes('360.html')){
-// 		SetFooterTransparent();
-// 		SetupPanolens();
-// 	}
-// 	else{
-// 		SetFooterPDP();
-// 	}
-// });
+$('#maincontainer').click(function(){
+	$('.footer').addClass('img-360-footer');
+	$('main').addClass('main-hide');
+	console.log('trigger');
+	// viewer.add (panorama);
+	setTimeout(function(){
+		$('main').removeClass('main-hide');
+		$('.footer').removeClass('img-360-footer');
+	}, 2000);
+});
 
-// function SetFooterTransparent(){
-// 	$('.footer').addClass('img-360-footer');
-// }
 
-// function SetFooterPDP(){
-// 	$('.footer').removeClass('img-360-footer');
-// }
-
-SetupPanolens();
-
-function SetupPanolens(){
-	var panorama;
-	var viewer = new PANOLENS.Viewer();
-    panorama = new PANOLENS.ImagePanorama( 'images/field.jpg' );
-    viewer.add( panorama );
-}

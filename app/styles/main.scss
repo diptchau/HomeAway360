@@ -1,7 +1,21 @@
-.image-holder{
+#maincontainer{
 	background-color: green;
 	height: 60vh;
 	width: 100%;
+}
+
+main {
+	background-color: white;
+	transition: all 0.5s ease;
+}
+
+.main-hide{
+	margin-top: 40vh;
+	opacity: 0;
+}
+
+body{
+	background-color: black;
 }
 
 .iconholder {
@@ -89,6 +103,10 @@
 
 .space-top {
 	margin-top: 20px;
+}
+
+.space-bottom {
+	margin-bottom: 20px;
 }
 
 .space-10 {
@@ -224,7 +242,7 @@ height: 120px;
 			color: #ff4848;
 		}
 	}
-	margin-top: -45px;
+	margin-top: -72px;
 	border-radius: 50%;
 }
 
@@ -284,7 +302,7 @@ height: 120px;
 	width: 100%;
 }
 
-.blk-holder {
+.360-container {
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -296,5 +314,10 @@ height: 120px;
 	width: 100%;
 	z-index: 5;
 }
+
+.panolens-canvas{
+	height: 100%;
+}
+
 
 
