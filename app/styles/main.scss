@@ -1,7 +1,23 @@
 #maincontainer{
-	background-color: green;
+	background-image: url('../images/field.jpg');
+	background-size: cover;
+	background-position: center;
 	height: 60vh;
 	width: 100%;
+	transition: all 0.5s ease;
+}
+
+#viewbox-360{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	// display: none;
+	transition: all 0.5s ease;
+}
+
+.closed{
+	opacity: 0;
 }
 
 main {
@@ -29,13 +45,7 @@ body{
 	background-image: url('../images/icons/015-share.svg');
 }
 
-.heart{
-	height: 24px;
-	width: 24px;
-	margin-left: 13px;
-	margin-top: -3px;
-	background-image: url('../images/icons/014-heart-shape-outline.svg');
-}
+
 
 .sleeps{
 	height: 30px;
@@ -115,18 +125,13 @@ body{
 
 .header {
 	
-background: rgba(0,0,0,1);
-background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.65) 43%, rgba(0,0,0,0) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(43%, rgba(0,0,0,0.65)), color-stop(100%, rgba(0,0,0,0)));
-background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.65) 43%, rgba(0,0,0,0) 100%);
-background: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.65) 43%, rgba(0,0,0,0) 100%);
-background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.65) 43%, rgba(0,0,0,0) 100%);
-background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.65) 43%, rgba(0,0,0,0) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+background: -moz-linear-gradient(top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.37) 59%, rgba(0,0,0,0.1) 81%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.37) 59%,rgba(0,0,0,0.1) 81%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.37) 59%,rgba(0,0,0,0.1) 81%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
 width: 100%;
 padding-top: 12px;
-height: 120px;
+height: 60px;
 
 	i {
 		margin-left: 20px;
@@ -177,7 +182,15 @@ height: 120px;
     -webkit-box-shadow: 0px -1px 5px 0px rgba(135,135,135,1);
 	-moz-box-shadow: 0px -1px 5px 0px rgba(135,135,135,1);
 	box-shadow: 0px -1px 5px 0px rgba(135,135,135,1);
-	transition: all 0.5s ease; 
+	transition: all 0.35s ease;
+	// transition: box-shadow 300ms ease; 
+	*{
+		transition: all 0.75s ease; 
+	}
+
+	.review-count {
+		color: #353e44;
+	}
 }
 
 
@@ -197,8 +210,9 @@ height: 120px;
 		color: white;
 	}
 
-	*{
-		transition: all 0.5s ease; 
+
+	.review-count {
+		color: white;
 	}
 }
 
@@ -232,9 +246,13 @@ height: 120px;
 		box-shadow: 0px 0px 5px 0px rgba(135,135,135,1);
 		padding: 0;
 		padding-top: 5px;
-		height: 50px;
-		width: 50px;
-		margin-left: 75%;
+		height: 0px;
+		width: 0px;
+		// padding-left: 25px;
+		// padding-right: 25px;
+		padding : 25px;
+		opacity: 1;
+		
 		icon {
 			margin-top: 2px;
 			margin-left: -2px;
@@ -242,8 +260,31 @@ height: 120px;
 			color: #ff4848;
 		}
 	}
-	margin-top: -72px;
+
+	.heart-hide{
+		height: 0px;
+		height: 0px;
+		opacity: 0;
+	}
+
+	transition: all 0.25s ease;
+	margin-top: -28px;
+	margin-left: 75%;
 	border-radius: 50%;
+	
+}
+
+.btn-hide {
+	opacity: 0;
+}
+
+.heart-icon{
+	transition: all 0.5s ease;
+	height: 24px;
+	width: 24px;
+	margin-left: -12px;
+	margin-top: -11px;
+	background-image: url('../images/icons/014-heart-shape-outline.svg');
 }
 
 .ovr-icons {
@@ -269,6 +310,7 @@ height: 120px;
 		margin-left: 40px;
 	}
 }
+
 .blk-bck {
 	height: 90px;
 	width: 90px;
