@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>InternHack Homeaway PDP</title>
+    <title>InternHack Homeaway 360</title>
     <link rel="icon" href="//csvcus.homeaway.com/rsrcs/cdn-logos/1.5.0/bce/moniker/homeaway_us/favicon.ico">
     <!-- Place favicon.ico in the root directory -->
     <!-- build:css styles/vendor.css -->
@@ -15,7 +15,7 @@
     <!-- build:css styles/main.css -->
     <link href="//csvcus.homeaway.com/rsrcs/baseline/3.4.0/stylesheets/baseline-gt.min.css" rel="stylesheet" media="screen">
     <link href="//csvcus.homeaway.com/rsrcs/baseline/3.4.0/stylesheets/gt.min.css" rel="stylesheet" media="screen">
-    <!-- <link rel="stylesheet" href="//csvcus.homeaway.com/rsrcs/AF/0C9AF6B3E3E361BF069AF7ED871623-base-pdp.css" media="all"> -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -40,13 +40,20 @@
         </span>
         </div>
     </div>
-    
-    <div id="maincontainer">
+    <!-- <div id="maincontainer"></div> -->
+    <div class="main-carousel">
+        <div class="carousel-cell img-1">
+        </div>
+        <div class="carousel-cell img-2">
+        </div>
+        <div class="carousel-cell img-3">
+        </div>
+        <div class="carousel-cell img-4">
+        </div>
     </div>
-    
+
     <div id="viewbox-360" class="closed"></div>
     
-
     <main>
         <div class="container">
             <div class="row">
@@ -190,8 +197,7 @@
             <div class="footer-buffer"></div>
         </div>
     </main>
-   
-   <div class="footer">
+    <div class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-xs-4">
@@ -228,6 +234,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js" type="text/javascript"></script>
     <script src="scripts/panolens-offline.min.js" type="text/javascript"></script>
     <script src="scripts/main.js"></script>
