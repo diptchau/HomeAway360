@@ -1,7 +1,8 @@
 var footer = $('.footer');
+var header = $('.header');
 var main = $('main');
 var normalImgHolder = $('#maincontainer');
-var btnBook = $('#book-btn');
+var btnClose = $('.share');
 var viewHolderJ = $('#viewbox-360');
 var viewHolder = document.getElementById( 'viewbox-360' );
 var panorama;
@@ -31,7 +32,7 @@ var carousel = $('.main-carousel');
 
 var viewer = new PANOLENS.Viewer({ 
 	container: viewHolder,
-	controlBar: true,
+	controlBar: false,
 	cameraFov: 120
 });
 
@@ -51,7 +52,7 @@ carousel.flickity({
 
 carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
   
-  let image = 'images/field.jpg';
+  let image = 'https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/field.jpg';
 
   // dismiss if cell was not clicked
   if ( !cellElement ) {
@@ -59,13 +60,13 @@ carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cell
   }
   
   switch(cellIndex){
-  	case 0: image = 'images/a1.jpg';
+  	case 0: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/b1.jpg';
   		break;
-  	case 1: image = 'images/b3.jpg';
+  	case 1: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/b3.jpg';
   		break;
-  	case 2: image = 'images/b1.jpg';
+  	case 2: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/b2.jpg';
   		break;
-  	case 3: image = 'images/a2.jpg';
+  	case 3: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/a1.jpg';
   		break;
   }
 
@@ -75,6 +76,7 @@ carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cell
 
 function LetTheGamesBegin(image){
 	footer.addClass('img-360-footer');
+	header.addClass('img-360-header');
     main.addClass('main-hide');
     carousel.css('height', '100vh');
 
@@ -98,7 +100,7 @@ normalImgHolder.click(function() {
 
 });
 
-btnBook.click(function(){
+btnClose.click(function(){
 	BacktoPDP();
 });
 
@@ -128,10 +130,10 @@ function Hide360pic(){
 
 function BacktoPDP() {
 	Hide360pic();
-	
-
+	header.removeClass('img-360-header');
+	footer.removeClass('img-360-footer');
 	setTimeout(function(){
-		footer.removeClass('img-360-footer');
+		// footer.fadeIn(500);
 		main.show().removeClass('main-hide');
 		// normalImgHolder.css({
 	 //    	'height': '60vh',
