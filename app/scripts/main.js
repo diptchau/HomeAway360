@@ -48,7 +48,7 @@ normalImgHolder.click(function() {
     	main.hide();
     	Show360pic();
     	normalImgHolder.css('position', 'absolute');
-    }, 150);
+    }, 350);
 
 });
 
