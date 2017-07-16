@@ -5,7 +5,10 @@ var normalImgHolder = $('#maincontainer');
 var btnClose = $('.share');
 var viewHolderJ = $('#viewbox-360');
 var viewHolder = document.getElementById( 'viewbox-360' );
-var panorama;
+var panorama, progress;
+var ico360 = $('.icon360');
+var pre = $('.se-pre-con');
+// var loader = $('.spinner');
 
 var isMobile = {
 	    Android: function() {
@@ -28,11 +31,16 @@ var isMobile = {
 	    }
 };
 
+window.onload = function() {
+	pre.fadeOut(500);
+	// loader.hide();
+};
+
 var carousel = $('.main-carousel');
 
 var viewer = new PANOLENS.Viewer({ 
 	container: viewHolder,
-	controlBar: false,
+	controlBar: true,
 	cameraFov: 120
 });
 
@@ -75,10 +83,12 @@ carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cell
 });
 
 function LetTheGamesBegin(image){
+	ico360.hide();
 	footer.addClass('img-360-footer');
 	header.addClass('img-360-header');
     main.addClass('main-hide');
     carousel.css('height', '100vh');
+    // loader.show();
 
     setTimeout(function(){
     	main.hide();
@@ -105,19 +115,32 @@ btnClose.click(function(){
 });
 
 function Show360pic(image) {	
+
 	panorama = new PANOLENS.ImagePanorama(image);
+	
+	panorama.addEventListener( 'progress', function ( event ) {
+
+        progress = event.progress.loaded / event.progress.total * 100;
+        
+        console.log(progress);
+		if ( progress === 100 ) {
+			console.log('done');
+    	}
+    });
+
 	viewer.add(panorama);
 
 	if(isMobile.any() != null){
 		viewer.enableControl(1);
 	}
-	//add loader here
-	viewHolderJ.removeClass("closed");
+
+	viewHolderJ.removeClass('closed');
+	// loader.hide();
 }
 
 function Hide360pic(){
 
-	viewHolderJ.addClass("closed");
+	viewHolderJ.addClass('closed');
 	setTimeout(function(){
 		if(panorama != null) {
 			panorama.dispose();
@@ -140,5 +163,6 @@ function BacktoPDP() {
 	 //    	'position': 'initial'
 	 //    });
 	    carousel.fadeIn(600).css('height', '60vh');
+	    ico360.fadeIn(1000);
 	}, 400);
 }
