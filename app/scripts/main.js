@@ -73,15 +73,13 @@ carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cell
   		break;
   	case 1: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/1.jpg';
   		break;
-  	case 2: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/2.jpg';
+  	case 2: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/3.jpg';
   		break;
-  	case 3: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/3.jpg';
+  	case 3: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/4.jpg';
   		break;
-  	case 4: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/4.jpg';
+  	case 4: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/5.jpg';
   		break;
-  	case 5: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/5.jpg';
-  		break;
-  	case 6: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/6.jpg';
+  	case 5: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/6.jpg';
   		break;
   }
 

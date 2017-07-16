@@ -99,6 +99,11 @@ gulp.task('serve', () => {
     browserSync.init({
       notify: false,
       port: 9000,
+      snippetOptions: {
+        rule: {
+          match: /qqqqqqqqqqqq/
+        }
+      },
       server: {
         baseDir: ['.tmp', 'app'],
         routes: {
