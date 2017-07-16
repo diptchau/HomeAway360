@@ -40,7 +40,7 @@ var carousel = $('.main-carousel');
 
 var viewer = new PANOLENS.Viewer({ 
 	container: viewHolder,
-	controlBar: true,
+	controlBar: false,
 	cameraFov: 120
 });
 
@@ -48,7 +48,7 @@ var viewer = new PANOLENS.Viewer({
 
 carousel.flickity({
   // options
-  initialIndex: 1,
+  initialIndex: 0,
   setGallerySize: false,
   imagesLoaded: true,
   prevNextButtons: false,
@@ -59,22 +59,26 @@ carousel.flickity({
 });
 
 carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
-  
-  let image = 'https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/field.jpg';
-
+  let image;
   // dismiss if cell was not clicked
   if ( !cellElement ) {
     return;
   }
   
   switch(cellIndex){
-  	case 0: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/b1.jpg';
+  	case 0: image = 'images/0.jpg';
   		break;
-  	case 1: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/b3.jpg';
+  	case 1: image = 'images/1.jpg';
   		break;
-  	case 2: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/b2.jpg';
+  	case 2: image = 'images/2.jpg';
   		break;
-  	case 3: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/a1.jpg';
+  	case 3: image = 'images/3.jpg';
+  		break;
+  	case 4: image = 'images/4.jpg';
+  		break;
+  	case 5: image = 'images/5.jpg';
+  		break;
+  	case 6: image = 'images/6.jpg';
   		break;
   }
 
@@ -130,9 +134,9 @@ function Show360pic(image) {
 
 	viewer.add(panorama);
 
-	if(isMobile.any() != null){
-		viewer.enableControl(1);
-	}
+	// if(isMobile.any() != null){
+	// 	viewer.enableControl(1);
+	// }
 
 	viewHolderJ.removeClass('closed');
 	// loader.hide();
