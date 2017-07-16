@@ -81,7 +81,7 @@ if it's not present, don't show loader */
         border-radius: 5px;
 
         .icn {
-			background-image: url(../images/icons/360.svg);
+			background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/icons/360.svg');
 	        background-size: cover;
 	        background-position: center;
 	        height: 60%;
@@ -94,49 +94,49 @@ if it's not present, don't show loader */
 }
 
 .img-1 {
-    background-image: url('../images/0.jpg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/0.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .img-2 {
-    background-image: url('../images/1.jpg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/1.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .img-3 {
-    background-image: url('../images/2.jpg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/2.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .img-4 {
-    background-image: url('../images/3.jpg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/3.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .img-5 {
-    background-image: url('../images/4.jpg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/4.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .img-6 {
-    background-image: url('../images/5.jpg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/5.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .img-7 {
-    background-image: url('../images/6.jpg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/6.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #maincontainer {
-    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/field.jpg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/field.jpg');
     background-size: cover;
     background-position: center;
     height: 60vh;
@@ -150,6 +150,10 @@ if it's not present, don't show loader */
     width: 100%;
     background-color: white;
     transition: all 0.5s ease;
+
+    span {
+        opacity: 0;
+    }
 }
 
 .closed {
@@ -178,7 +182,7 @@ body {
 
 .share {
     margin-right: 15px;
-    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/icons/015-share.svg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/icons/015-share.svg');
 }
 
 .share:hover{
@@ -190,7 +194,7 @@ body {
     width: 30px;
     margin: auto;
     margin-bottom: 10px;
-    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/icons/013-user-list.svg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/icons/013-user-list.svg');
 }
 
 .bedrooms {
@@ -198,7 +202,7 @@ body {
     width: 30px;
     margin: auto;
     margin-bottom: 10px;
-    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/icons/012-bed.svg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/icons/012-bed.svg');
 }
 
 .baths {
@@ -206,47 +210,47 @@ body {
     width: 30px;
     margin: auto;
     margin-bottom: 10px;
-    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/icons/011-shower.svg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/icons/011-shower.svg');
 }
 
 .wifi {
-    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/icons/001-wifi.svg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/icons/001-wifi.svg');
 }
 
 .hanger {
-    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/icons/002-hanger.svg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/icons/002-hanger.svg');
 }
 
 .pets {
-    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/icons/003-paw-print.svg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/icons/003-paw-print.svg');
 }
 
 .microwave {
-    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/icons/004-microwave.svg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/icons/004-microwave.svg');
 }
 
 .dishwasher {
-    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/icons/005-dishwasher.svg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/icons/005-dishwasher.svg');
 }
 
 .hair {
-    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/icons/006-hair-dryer.svg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/icons/006-hair-dryer.svg');
 }
 
 .towel {
-    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/icons/007-towel.svg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/icons/007-towel.svg');
 }
 
 .parking {
-    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/icons/008-parking.svg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/icons/008-parking.svg');
 }
 
 .iron {
-    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/icons/009-iron.svg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/icons/009-iron.svg');
 }
 
 .beach {
-    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/icons/010-palm-tree.svg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/icons/010-palm-tree.svg');
 }
 
 .row {
@@ -424,7 +428,7 @@ body {
     width: 24px;
     margin-left: -12px;
     margin-top: -11px;
-    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/icons/014-heart-shape-outline.svg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/icons/014-heart-shape-outline.svg');
 }
 
 .ovr-icons {
@@ -451,7 +455,7 @@ body {
 .blk-bck {
     height: 90px;
     width: 90px;
-    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/61bc5f82/app/images/owner-pic.jpeg');
+    background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/owner-pic.jpeg');
     background-size: cover;
     background-position: center;
 }
@@ -464,7 +468,7 @@ body {
         opacity: 0;
     }
     .share {
-        background-image: url('../images/icons/cancel.svg');
+        background-image: url('https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/icons/cancel.svg');
     }
 }
 

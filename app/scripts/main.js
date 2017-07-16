@@ -10,6 +10,9 @@ var ico360 = $('.icon360');
 var pre = $('.se-pre-con');
 // var loader = $('.spinner');
 
+$('script')[2].remove();
+$('script')[1].remove();
+
 var isMobile = {
 	    Android: function() {
 	        return navigator.userAgent.match(/Android/i);
@@ -40,7 +43,7 @@ var carousel = $('.main-carousel');
 
 var viewer = new PANOLENS.Viewer({ 
 	container: viewHolder,
-	controlBar: false,
+	controlBar: true,
 	cameraFov: 120
 });
 
@@ -66,19 +69,19 @@ carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cell
   }
   
   switch(cellIndex){
-  	case 0: image = 'images/0.jpg';
+  	case 0: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/0.jpg';
   		break;
-  	case 1: image = 'images/1.jpg';
+  	case 1: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/1.jpg';
   		break;
-  	case 2: image = 'images/2.jpg';
+  	case 2: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/2.jpg';
   		break;
-  	case 3: image = 'images/3.jpg';
+  	case 3: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/3.jpg';
   		break;
-  	case 4: image = 'images/4.jpg';
+  	case 4: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/4.jpg';
   		break;
-  	case 5: image = 'images/5.jpg';
+  	case 5: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/5.jpg';
   		break;
-  	case 6: image = 'images/6.jpg';
+  	case 6: image = 'https://cdn.rawgit.com/diptchau/HomeAway360/master/app/images/6.jpg';
   		break;
   }
 
@@ -121,23 +124,13 @@ btnClose.click(function(){
 function Show360pic(image) {	
 
 	panorama = new PANOLENS.ImagePanorama(image);
-	
-	panorama.addEventListener( 'progress', function ( event ) {
-
-        progress = event.progress.loaded / event.progress.total * 100;
-        
-        console.log(progress);
-		if ( progress === 100 ) {
-			console.log('done');
-    	}
-    });
-
 	viewer.add(panorama);
 
-	// if(isMobile.any() != null){
-	// 	viewer.enableControl(1);
-	// }
+	if(isMobile.any() != null){
+		viewer.enableControl(1);
+	}
 
+	
 	viewHolderJ.removeClass('closed');
 	// loader.hide();
 }
