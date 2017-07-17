@@ -1,10 +1,17 @@
 var footer = $('.footer');
+var header = $('.header');
 var main = $('main');
 var normalImgHolder = $('#maincontainer');
-var btnBook = $('#book-btn');
+var btnClose = $('.share');
 var viewHolderJ = $('#viewbox-360');
 var viewHolder = document.getElementById( 'viewbox-360' );
-var panorama;
+var panorama, progress;
+var ico360 = $('.icon360');
+var pre = $('.se-pre-con');
+// var loader = $('.spinner');
+
+$('script')[2].remove();
+$('script')[1].remove();
 
 var isMobile = {
 	    Android: function() {
@@ -27,6 +34,11 @@ var isMobile = {
 	    }
 };
 
+window.onload = function() {
+	pre.fadeOut(500);
+	// loader.hide();
+};
+
 var carousel = $('.main-carousel');
 
 var viewer = new PANOLENS.Viewer({ 
@@ -39,7 +51,7 @@ var viewer = new PANOLENS.Viewer({
 
 carousel.flickity({
   // options
-  initialIndex: 1,
+  initialIndex: 0,
   setGallerySize: false,
   imagesLoaded: true,
   prevNextButtons: false,
@@ -50,22 +62,24 @@ carousel.flickity({
 });
 
 carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
-  
-  let image = 'images/field.jpg';
-
+  let image;
   // dismiss if cell was not clicked
   if ( !cellElement ) {
     return;
   }
   
   switch(cellIndex){
-  	case 0: image = 'images/a1.jpg';
+  	case 0: image = 'assets/0.jpg';
   		break;
-  	case 1: image = 'images/b3.jpg';
+  	case 1: image = 'assets/1.jpg';
   		break;
-  	case 2: image = 'images/b1.jpg';
+  	case 2: image = 'assets/3.jpg';
   		break;
-  	case 3: image = 'images/a2.jpg';
+  	case 3: image = 'assets/4.jpg';
+  		break;
+  	case 4: image = 'assets/5.jpg';
+  		break;
+  	case 5: image = 'assets/6.jpg';
   		break;
   }
 
@@ -74,9 +88,12 @@ carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cell
 });
 
 function LetTheGamesBegin(image){
+	ico360.hide();
 	footer.addClass('img-360-footer');
+	header.addClass('img-360-header');
     main.addClass('main-hide');
     carousel.css('height', '100vh');
+    // loader.show();
 
     setTimeout(function(){
     	main.hide();
@@ -98,24 +115,27 @@ normalImgHolder.click(function() {
 
 });
 
-btnBook.click(function(){
+btnClose.click(function(){
 	BacktoPDP();
 });
 
 function Show360pic(image) {	
+
 	panorama = new PANOLENS.ImagePanorama(image);
 	viewer.add(panorama);
 
 	if(isMobile.any() != null){
 		viewer.enableControl(1);
 	}
-	//add loader here
-	viewHolderJ.removeClass("closed");
+
+	
+	viewHolderJ.removeClass('closed');
+	// loader.hide();
 }
 
 function Hide360pic(){
 
-	viewHolderJ.addClass("closed");
+	viewHolderJ.addClass('closed');
 	setTimeout(function(){
 		if(panorama != null) {
 			panorama.dispose();
@@ -128,15 +148,16 @@ function Hide360pic(){
 
 function BacktoPDP() {
 	Hide360pic();
-	
-
+	header.removeClass('img-360-header');
+	footer.removeClass('img-360-footer');
 	setTimeout(function(){
-		footer.removeClass('img-360-footer');
+		// footer.fadeIn(500);
 		main.show().removeClass('main-hide');
 		// normalImgHolder.css({
 	 //    	'height': '60vh',
 	 //    	'position': 'initial'
 	 //    });
 	    carousel.fadeIn(600).css('height', '60vh');
+	    ico360.fadeIn(1000);
 	}, 400);
 }
